@@ -30,9 +30,11 @@ namespace SimpleBudgeting
         private void InitializeComponent()
         {
             this.totalPaycheckLabel = new System.Windows.Forms.Label();
-            this.totalPaycheckTextBox = new System.Windows.Forms.TextBox();
             this.leftToBudgetTextBox = new System.Windows.Forms.TextBox();
             this.unbudgetedLabel = new System.Windows.Forms.Label();
+            this.totalPaycheckTextBox = new System.Windows.Forms.NumericUpDown();
+            this.addBudgetItemBttn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).BeginInit();
             this.SuspendLayout();
             // 
             // totalPaycheckLabel
@@ -44,16 +46,6 @@ namespace SimpleBudgeting
             this.totalPaycheckLabel.Size = new System.Drawing.Size(82, 13);
             this.totalPaycheckLabel.TabIndex = 1;
             this.totalPaycheckLabel.Text = "Total Paycheck";
-            // 
-            // totalPaycheckTextBox
-            // 
-            this.totalPaycheckTextBox.AcceptsReturn = true;
-            this.totalPaycheckTextBox.Location = new System.Drawing.Point(131, 57);
-            this.totalPaycheckTextBox.Name = "totalPaycheckTextBox";
-            this.totalPaycheckTextBox.Size = new System.Drawing.Size(100, 20);
-            this.totalPaycheckTextBox.TabIndex = 2;
-            this.totalPaycheckTextBox.TextChanged += new System.EventHandler(this.TotalPaycheckTextBox_TextChanged);
-            this.totalPaycheckTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TotalPaycheckTextBox_KeyDown);
             // 
             // leftToBudgetTextBox
             // 
@@ -73,19 +65,49 @@ namespace SimpleBudgeting
             this.unbudgetedLabel.TabIndex = 4;
             this.unbudgetedLabel.Text = "Unbudgeted";
             // 
+            // totalPaycheckTextBox
+            // 
+            this.totalPaycheckTextBox.DecimalPlaces = 2;
+            this.totalPaycheckTextBox.Location = new System.Drawing.Point(119, 55);
+            this.totalPaycheckTextBox.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
+            this.totalPaycheckTextBox.Name = "totalPaycheckTextBox";
+            this.totalPaycheckTextBox.Size = new System.Drawing.Size(120, 20);
+            this.totalPaycheckTextBox.TabIndex = 5;
+            this.totalPaycheckTextBox.ThousandsSeparator = true;
+            this.totalPaycheckTextBox.ValueChanged += new System.EventHandler(this.TotalPaycheckTextBox_ValueChanged);
+            // 
+            // addBudgetItemBttn
+            // 
+            this.addBudgetItemBttn.BackColor = System.Drawing.SystemColors.Control;
+            this.addBudgetItemBttn.ForeColor = System.Drawing.Color.Black;
+            this.addBudgetItemBttn.Location = new System.Drawing.Point(510, 54);
+            this.addBudgetItemBttn.Name = "addBudgetItemBttn";
+            this.addBudgetItemBttn.Size = new System.Drawing.Size(118, 23);
+            this.addBudgetItemBttn.TabIndex = 6;
+            this.addBudgetItemBttn.Text = "Add a Budget Item";
+            this.addBudgetItemBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.addBudgetItemBttn.UseVisualStyleBackColor = false;
+            this.addBudgetItemBttn.Click += new System.EventHandler(this.addBudgetItemBttn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addBudgetItemBttn);
+            this.Controls.Add(this.totalPaycheckTextBox);
             this.Controls.Add(this.unbudgetedLabel);
             this.Controls.Add(this.leftToBudgetTextBox);
-            this.Controls.Add(this.totalPaycheckTextBox);
             this.Controls.Add(this.totalPaycheckLabel);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,9 +115,10 @@ namespace SimpleBudgeting
 
         #endregion
         private System.Windows.Forms.Label totalPaycheckLabel;
-        private System.Windows.Forms.TextBox totalPaycheckTextBox;
         private System.Windows.Forms.TextBox leftToBudgetTextBox;
         private System.Windows.Forms.Label unbudgetedLabel;
+        private System.Windows.Forms.NumericUpDown totalPaycheckTextBox;
+        private System.Windows.Forms.Button addBudgetItemBttn;
     }
 }
 

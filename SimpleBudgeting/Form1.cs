@@ -12,44 +12,25 @@ namespace SimpleBudgeting
 {
     public partial class Form1 : Form
     {
-        string totalPaycheckString;
-        double totalPaycheck;
-        double leftToBudget;
-        double budgetedAmount;
+        decimal totalPaycheck;
+        decimal budgetedAmount;
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        public void TotalPaycheckTextBox_TextChanged(object sender, EventArgs e)
+        public void TotalPaycheckTextBox_ValueChanged(object sender, EventArgs e)
         {
-            try
-            {
+            totalPaycheck = totalPaycheckTextBox.Value;
+            leftToBudgetTextBox.Text = Convert.ToString(totalPaycheck - budgetedAmount);
             
-             totalPaycheckString = totalPaycheckTextBox.Text;
-             totalPaycheck = Convert.ToDouble(totalPaycheckString);
-             leftToBudget = totalPaycheck - budgetedAmount;
-
-             leftToBudgetTextBox.Text = Convert.ToString(leftToBudget);
-
-            } catch
-            {
-                _ = MessageBox.Show("Input must be numbers and decimals!");
-            }
 
         }
 
-        public void TotalPaycheckTextBox_KeyDown(object sender, KeyEventArgs e)
+        private void addBudgetItemBttn_Click(object sender, EventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-
-                leftToBudgetTextBox.Text = Convert.ToString(leftToBudget);
-            } else
-            {
-                return;
-            }
-
+            Form2 = new AddBudgetItem();
         }
     }
 }
