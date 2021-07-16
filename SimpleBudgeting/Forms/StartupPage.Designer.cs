@@ -1,7 +1,7 @@
 ﻿
 namespace SimpleBudgeting
 {
-    partial class Form1
+    partial class StartupPage
     {
         /// <summary>
         /// Required designer variable.

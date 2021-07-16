@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace SimpleBudgeting
 {
-    public partial class Form1 : Form
+    public partial class StartupPage : Form
     {
         decimal totalPaycheck;
         decimal budgetedAmount;
         
-        public Form1()
+        public StartupPage()
         {
             InitializeComponent();
         }
@@ -30,7 +30,8 @@ namespace SimpleBudgeting
 
         private void addBudgetItemBttn_Click(object sender, EventArgs e)
         {
-            Form2 = new AddBudgetItem();
+            var addBudgetItem = new AddBudgetItem();
+            addBudgetItem.Show();
         }
     }
 }
