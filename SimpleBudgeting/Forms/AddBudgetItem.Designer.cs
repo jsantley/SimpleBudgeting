@@ -88,6 +88,7 @@ namespace SimpleBudgeting
             this.isAFundcheckBx.TabIndex = 4;
             this.isAFundcheckBx.Text = "Is this a Fund?";
             this.isAFundcheckBx.UseVisualStyleBackColor = true;
+            this.isAFundcheckBx.CheckedChanged += new System.EventHandler(this.isAFundcheckBx_CheckedChanged);
             // 
             // goalLabel
             // 
