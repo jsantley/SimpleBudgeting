@@ -40,7 +40,8 @@ namespace SimpleBudgeting
             {
                 goalLabel.Visible = true;
                 goalTextBox.Visible = true;
-            } else
+            }
+            else
             {
                 goalLabel.Visible = false;
                 goalTextBox.Visible = false;
@@ -52,5 +53,12 @@ namespace SimpleBudgeting
         {
             fundGoal = goalTextBox.Value;
         }
+
+        private void AddBgtItmDoneBttn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }

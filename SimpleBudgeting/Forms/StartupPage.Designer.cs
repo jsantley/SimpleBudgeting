@@ -68,7 +68,7 @@ namespace SimpleBudgeting
             // totalPaycheckTextBox
             // 
             this.totalPaycheckTextBox.DecimalPlaces = 2;
-            this.totalPaycheckTextBox.Location = new System.Drawing.Point(119, 55);
+            this.totalPaycheckTextBox.Location = new System.Drawing.Point(119, 54);
             this.totalPaycheckTextBox.Maximum = new decimal(new int[] {
             1316134912,
             2328,
@@ -93,7 +93,7 @@ namespace SimpleBudgeting
             this.addBudgetItemBttn.UseVisualStyleBackColor = false;
             this.addBudgetItemBttn.Click += new System.EventHandler(this.addBudgetItemBttn_Click);
             // 
-            // Form1
+            // StartupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +105,7 @@ namespace SimpleBudgeting
             this.Controls.Add(this.leftToBudgetTextBox);
             this.Controls.Add(this.totalPaycheckLabel);
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "Form1";
+            this.Name = "StartupPage";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).EndInit();
             this.ResumeLayout(false);

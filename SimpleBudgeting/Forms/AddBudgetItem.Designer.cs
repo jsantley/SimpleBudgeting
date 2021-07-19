@@ -36,6 +36,7 @@ namespace SimpleBudgeting
             this.isAFundcheckBx = new System.Windows.Forms.CheckBox();
             this.goalLabel = new System.Windows.Forms.Label();
             this.goalTextBox = new System.Windows.Forms.NumericUpDown();
+            this.AddBgtItmDoneBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).BeginInit();
             this.SuspendLayout();
@@ -109,11 +110,22 @@ namespace SimpleBudgeting
             this.goalTextBox.Visible = false;
             this.goalTextBox.ValueChanged += new System.EventHandler(this.goalTextBox_ValueChanged);
             // 
+            // AddBgtItmDoneBttn
+            // 
+            this.AddBgtItmDoneBttn.Location = new System.Drawing.Point(165, 259);
+            this.AddBgtItmDoneBttn.Name = "AddBgtItmDoneBttn";
+            this.AddBgtItmDoneBttn.Size = new System.Drawing.Size(75, 23);
+            this.AddBgtItmDoneBttn.TabIndex = 7;
+            this.AddBgtItmDoneBttn.Text = "Done";
+            this.AddBgtItmDoneBttn.UseVisualStyleBackColor = true;
+            this.AddBgtItmDoneBttn.Click += new System.EventHandler(this.AddBgtItmDoneBttn_Click);
+            // 
             // AddBudgetItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 388);
+            this.ClientSize = new System.Drawing.Size(412, 306);
+            this.Controls.Add(this.AddBgtItmDoneBttn);
             this.Controls.Add(this.goalTextBox);
             this.Controls.Add(this.goalLabel);
             this.Controls.Add(this.isAFundcheckBx);
@@ -139,5 +151,6 @@ namespace SimpleBudgeting
         private System.Windows.Forms.CheckBox isAFundcheckBx;
         private System.Windows.Forms.Label goalLabel;
         private System.Windows.Forms.NumericUpDown goalTextBox;
+        private System.Windows.Forms.Button AddBgtItmDoneBttn;
     }
 }
