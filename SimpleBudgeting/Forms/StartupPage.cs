@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SimpleBudgeting
 {
@@ -33,5 +34,7 @@ namespace SimpleBudgeting
             var addBudgetItem = new AddBudgetItem();
             addBudgetItem.Show();
         }
+
+
     }
 }

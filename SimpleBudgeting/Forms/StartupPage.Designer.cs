@@ -34,6 +34,11 @@ namespace SimpleBudgeting
             this.unbudgetedLabel = new System.Windows.Forms.Label();
             this.totalPaycheckTextBox = new System.Windows.Forms.NumericUpDown();
             this.addBudgetItemBttn = new System.Windows.Forms.Button();
+            this.bgtItemListView = new System.Windows.Forms.ListView();
+            this.budgetItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.transactionButton = new System.Windows.Forms.Button();
+            this.editTransaction = new System.Windows.Forms.Button();
+            this.deletebgtItemBttn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,9 +87,9 @@ namespace SimpleBudgeting
             // 
             // addBudgetItemBttn
             // 
-            this.addBudgetItemBttn.BackColor = System.Drawing.SystemColors.Control;
+            this.addBudgetItemBttn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.addBudgetItemBttn.ForeColor = System.Drawing.Color.Black;
-            this.addBudgetItemBttn.Location = new System.Drawing.Point(510, 54);
+            this.addBudgetItemBttn.Location = new System.Drawing.Point(500, 42);
             this.addBudgetItemBttn.Name = "addBudgetItemBttn";
             this.addBudgetItemBttn.Size = new System.Drawing.Size(118, 23);
             this.addBudgetItemBttn.TabIndex = 6;
@@ -93,12 +98,61 @@ namespace SimpleBudgeting
             this.addBudgetItemBttn.UseVisualStyleBackColor = false;
             this.addBudgetItemBttn.Click += new System.EventHandler(this.addBudgetItemBttn_Click);
             // 
+            // bgtItemListView
+            // 
+            this.bgtItemListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.budgetItem});
+            this.bgtItemListView.HideSelection = false;
+            this.bgtItemListView.Location = new System.Drawing.Point(44, 129);
+            this.bgtItemListView.Name = "bgtItemListView";
+            this.bgtItemListView.Size = new System.Drawing.Size(574, 242);
+            this.bgtItemListView.TabIndex = 7;
+            this.bgtItemListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // budgetItem
+            // 
+            this.budgetItem.Text = "Budget Item";
+            // 
+            // transactionButton
+            // 
+            this.transactionButton.ForeColor = System.Drawing.Color.Black;
+            this.transactionButton.Location = new System.Drawing.Point(489, 400);
+            this.transactionButton.Name = "transactionButton";
+            this.transactionButton.Size = new System.Drawing.Size(129, 23);
+            this.transactionButton.TabIndex = 8;
+            this.transactionButton.Text = "Add Transaction";
+            this.transactionButton.UseVisualStyleBackColor = true;
+            // 
+            // editTransaction
+            // 
+            this.editTransaction.ForeColor = System.Drawing.Color.Black;
+            this.editTransaction.Location = new System.Drawing.Point(489, 439);
+            this.editTransaction.Name = "editTransaction";
+            this.editTransaction.Size = new System.Drawing.Size(129, 23);
+            this.editTransaction.TabIndex = 9;
+            this.editTransaction.Text = "View Transactions";
+            this.editTransaction.UseVisualStyleBackColor = true;
+            // 
+            // deletebgtItemBttn
+            // 
+            this.deletebgtItemBttn.ForeColor = System.Drawing.Color.Black;
+            this.deletebgtItemBttn.Location = new System.Drawing.Point(500, 80);
+            this.deletebgtItemBttn.Name = "deletebgtItemBttn";
+            this.deletebgtItemBttn.Size = new System.Drawing.Size(118, 23);
+            this.deletebgtItemBttn.TabIndex = 10;
+            this.deletebgtItemBttn.Text = "Delete Budget Item";
+            this.deletebgtItemBttn.UseVisualStyleBackColor = true;
+            // 
             // StartupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(692, 521);
+            this.Controls.Add(this.deletebgtItemBttn);
+            this.Controls.Add(this.editTransaction);
+            this.Controls.Add(this.transactionButton);
+            this.Controls.Add(this.bgtItemListView);
             this.Controls.Add(this.addBudgetItemBttn);
             this.Controls.Add(this.totalPaycheckTextBox);
             this.Controls.Add(this.unbudgetedLabel);
@@ -119,6 +173,11 @@ namespace SimpleBudgeting
         private System.Windows.Forms.Label unbudgetedLabel;
         private System.Windows.Forms.NumericUpDown totalPaycheckTextBox;
         private System.Windows.Forms.Button addBudgetItemBttn;
+        private System.Windows.Forms.ListView bgtItemListView;
+        private System.Windows.Forms.ColumnHeader budgetItem;
+        private System.Windows.Forms.Button transactionButton;
+        private System.Windows.Forms.Button editTransaction;
+        private System.Windows.Forms.Button deletebgtItemBttn;
     }
 }
 
