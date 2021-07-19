@@ -60,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddBudgetItem.resx">
+      <DependentUpon>AddBudgetItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\StartupPage.resx">
       <DependentUpon>StartupPage.cs</DependentUpon>
     </EmbeddedResource>

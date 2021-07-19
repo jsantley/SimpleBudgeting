@@ -12,6 +12,11 @@ namespace SimpleBudgeting
 {
     public partial class AddBudgetItem : Form
     {
+        string bgtItemName;
+        decimal amtbudgetedMonthly;
+        bool isAFund;
+        decimal fundGoal;
+
         public AddBudgetItem()
         {
             InitializeComponent();
@@ -23,9 +28,9 @@ namespace SimpleBudgeting
             bgtItemName = bgtItemNmetxtBox.Text;
         }
 
-        private void amtBudgetedMonthly_ValueChanged(object sender, EventArgs e)
+        private void amtBudgeted_ValueChanged(object sender, EventArgs e)
         {
-            amtbudgetedMonthly = amtBudgetedMonthly.Value;
+            amtbudgetedMonthly = amtBudgeted.Value;
         }
 
         private void isAFundcheckBx_CheckedChanged(object sender, EventArgs e)
@@ -43,5 +48,9 @@ namespace SimpleBudgeting
 
         }
 
+        private void goalTextBox_ValueChanged(object sender, EventArgs e)
+        {
+            fundGoal = goalTextBox.Value;
+        }
     }
 }
