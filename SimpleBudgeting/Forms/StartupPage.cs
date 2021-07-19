@@ -15,7 +15,7 @@ namespace SimpleBudgeting
     {
         decimal totalPaycheck;
         decimal budgetedAmount;
-        
+
         public StartupPage()
         {
             InitializeComponent();
