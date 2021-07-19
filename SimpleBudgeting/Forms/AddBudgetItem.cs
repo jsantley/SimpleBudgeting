@@ -16,5 +16,32 @@ namespace SimpleBudgeting
         {
             InitializeComponent();
         }
+
+
+        private void bgtItemNmetxtBox_TextChanged(object sender, EventArgs e)
+        {
+            bgtItemName = bgtItemNmetxtBox.Text;
+        }
+
+        private void amtBudgetedMonthly_ValueChanged(object sender, EventArgs e)
+        {
+            amtbudgetedMonthly = amtBudgetedMonthly.Value;
+        }
+
+        private void isAFundcheckBx_CheckedChanged(object sender, EventArgs e)
+        {
+            isAFund = isAFundcheckBx.Checked;
+            if (isAFund == true)
+            {
+                goalLabel.Visible = true;
+                goalTextBox.Visible = true;
+            } else
+            {
+                goalLabel.Visible = false;
+                goalTextBox.Visible = false;
+            }
+
+        }
+
     }
 }
