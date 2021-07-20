@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SimpleBudgeting
 {
@@ -17,6 +19,14 @@ namespace SimpleBudgeting
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new StartupPage());
+            //syntax of sql server connection string
+            //for windows auth.
+            //@"Data Source=(machineName)\(instanceName);Initial Catalog=(DBname);Integrated Security = true;"
+
+
+
+
+
         }
     }
 }

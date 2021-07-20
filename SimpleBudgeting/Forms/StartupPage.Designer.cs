@@ -35,10 +35,10 @@ namespace SimpleBudgeting
             this.totalPaycheckTextBox = new System.Windows.Forms.NumericUpDown();
             this.addBudgetItemBttn = new System.Windows.Forms.Button();
             this.bgtItemListView = new System.Windows.Forms.ListView();
-            this.budgetItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.transactionButton = new System.Windows.Forms.Button();
             this.editTransaction = new System.Windows.Forms.Button();
             this.deletebgtItemBttn = new System.Windows.Forms.Button();
+            this.refreshData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,18 +100,13 @@ namespace SimpleBudgeting
             // 
             // bgtItemListView
             // 
-            this.bgtItemListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.budgetItem});
+            this.bgtItemListView.GridLines = true;
             this.bgtItemListView.HideSelection = false;
             this.bgtItemListView.Location = new System.Drawing.Point(44, 129);
             this.bgtItemListView.Name = "bgtItemListView";
             this.bgtItemListView.Size = new System.Drawing.Size(574, 242);
             this.bgtItemListView.TabIndex = 7;
             this.bgtItemListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // budgetItem
-            // 
-            this.budgetItem.Text = "Budget Item";
             // 
             // transactionButton
             // 
@@ -143,12 +138,24 @@ namespace SimpleBudgeting
             this.deletebgtItemBttn.Text = "Delete Budget Item";
             this.deletebgtItemBttn.UseVisualStyleBackColor = true;
             // 
+            // refreshData
+            // 
+            this.refreshData.ForeColor = System.Drawing.Color.Black;
+            this.refreshData.Location = new System.Drawing.Point(44, 417);
+            this.refreshData.Name = "refreshData";
+            this.refreshData.Size = new System.Drawing.Size(96, 45);
+            this.refreshData.TabIndex = 11;
+            this.refreshData.Text = "Refresh Data";
+            this.refreshData.UseVisualStyleBackColor = true;
+            this.refreshData.Click += new System.EventHandler(this.refreshData_Click);
+            // 
             // StartupPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(692, 521);
+            this.Controls.Add(this.refreshData);
             this.Controls.Add(this.deletebgtItemBttn);
             this.Controls.Add(this.editTransaction);
             this.Controls.Add(this.transactionButton);
@@ -160,7 +167,7 @@ namespace SimpleBudgeting
             this.Controls.Add(this.totalPaycheckLabel);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "StartupPage";
-            this.Text = "Form1";
+            this.Text = "Startup Page";
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,10 +181,10 @@ namespace SimpleBudgeting
         private System.Windows.Forms.NumericUpDown totalPaycheckTextBox;
         private System.Windows.Forms.Button addBudgetItemBttn;
         private System.Windows.Forms.ListView bgtItemListView;
-        private System.Windows.Forms.ColumnHeader budgetItem;
         private System.Windows.Forms.Button transactionButton;
         private System.Windows.Forms.Button editTransaction;
         private System.Windows.Forms.Button deletebgtItemBttn;
+        private System.Windows.Forms.Button refreshData;
     }
 }
 

@@ -24,12 +24,6 @@ namespace SimpleBudgeting
             InitializeComponent();
         }
 
-        private void SQLConnectionClass()
-        {
-            InitializeComponent();
-            
-
-        }
 
 
         private void bgtItemNmetxtBox_TextChanged(object sender, EventArgs e)
