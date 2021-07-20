@@ -51,17 +51,17 @@ namespace SimpleBudgeting
 
         private void refreshData_Click(object sender, EventArgs e)
         {
-            bgtItemListView.Columns.Add("Budget Item",150);
+            bgtItemListView.Columns.Add("Budget Item", 150, HorizontalAlignment.Center);
             bgtItemListView.Columns.Add("Amount Budgeted", 150, HorizontalAlignment.Center);
             bgtItemListView.Columns.Add("Amount Remaining", 150, HorizontalAlignment.Center);
             bgtItemListView.View = View.Details;
 
             con.Open();
-            cmd = new SqlCommand("select * from overviewTable",con);
+            cmd = new SqlCommand("select * from overviewTable", con);
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
             _ = da.Fill(ds, "Overview");
-            
+
         }
     }
 }
