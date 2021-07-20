@@ -60,7 +60,7 @@ namespace SimpleBudgeting
             cmd = new SqlCommand("select * from overviewTable",con);
             da = new SqlDataAdapter(cmd);
             ds = new DataSet();
-            da.Fill(ds, "Overview");
+            _ = da.Fill(ds, "Overview");
             
         }
     }
