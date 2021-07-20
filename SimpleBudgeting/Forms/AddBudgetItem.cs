@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SimpleBudgeting
 {
@@ -16,16 +17,25 @@ namespace SimpleBudgeting
         decimal amtbudgetedMonthly;
         bool isAFund;
         decimal fundGoal;
+        string connectionString;
 
         public AddBudgetItem()
         {
             InitializeComponent();
         }
 
+        private void SQLConnectionClass()
+        {
+            InitializeComponent();
+            
+
+        }
+
 
         private void bgtItemNmetxtBox_TextChanged(object sender, EventArgs e)
         {
             bgtItemName = bgtItemNmetxtBox.Text;
+            
         }
 
         private void amtBudgeted_ValueChanged(object sender, EventArgs e)

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SQLConnectionClass.cs" />
     <Compile Include="Forms\AddBudgetItem.cs">
       <SubType>Form</SubType>
     </Compile>

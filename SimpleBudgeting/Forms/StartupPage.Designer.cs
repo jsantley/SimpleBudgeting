@@ -96,7 +96,7 @@ namespace SimpleBudgeting
             this.addBudgetItemBttn.Text = "Add a Budget Item";
             this.addBudgetItemBttn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.addBudgetItemBttn.UseVisualStyleBackColor = false;
-            this.addBudgetItemBttn.Click += new System.EventHandler(this.addBudgetItemBttn_Click);
+            this.addBudgetItemBttn.Click += new System.EventHandler(this.AddBudgetItemBttn_Click);
             // 
             // bgtItemListView
             // 

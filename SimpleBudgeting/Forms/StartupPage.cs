@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace SimpleBudgeting
 {
     public partial class StartupPage : Form
@@ -16,10 +17,13 @@ namespace SimpleBudgeting
         decimal totalPaycheck;
         decimal budgetedAmount;
 
+
         public StartupPage()
         {
             InitializeComponent();
         }
+
+
 
         public void TotalPaycheckTextBox_ValueChanged(object sender, EventArgs e)
         {
@@ -29,10 +33,13 @@ namespace SimpleBudgeting
 
         }
 
-        private void addBudgetItemBttn_Click(object sender, EventArgs e)
+        public void AddBudgetItemBttn_Click(object sender, EventArgs e)
         {
+            
             var addBudgetItem = new AddBudgetItem();
             addBudgetItem.Show();
+            
+
         }
 
 
