@@ -17,11 +17,7 @@ namespace SimpleBudgeting
         decimal totalPaycheck;
         decimal budgetedAmount;
 
-        SqlConnection con = new SqlConnection(@"Data Source=TEST-MACHINE-RI;Initial Catalog=simpleBudgetDB;Integrated Security=True");
-        SqlCommand cmd;
-        DataTable dt;
-        SqlDataAdapter da;
-        DataSet ds;
+        
 
 
         public StartupPage()
@@ -51,16 +47,21 @@ namespace SimpleBudgeting
 
         private void refreshData_Click(object sender, EventArgs e)
         {
-            bgtItemListView.Columns.Add("Budget Item", 150, HorizontalAlignment.Center);
-            bgtItemListView.Columns.Add("Amount Budgeted", 150, HorizontalAlignment.Center);
-            bgtItemListView.Columns.Add("Amount Remaining", 150, HorizontalAlignment.Center);
-            bgtItemListView.View = View.Details;
+           
 
-            con.Open();
-            cmd = new SqlCommand("select * from overviewTable", con);
-            da = new SqlDataAdapter(cmd);
-            ds = new DataSet();
-            _ = da.Fill(ds, "Overview");
+        }
+
+        
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void StartupPage_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'simpleBudgetDBDataSet1.overviewTable' table. You can move, or remove it, as needed.
+            this.overviewTableTableAdapter1.Fill(this.simpleBudgetDBDataSet1.overviewTable);
 
         }
     }

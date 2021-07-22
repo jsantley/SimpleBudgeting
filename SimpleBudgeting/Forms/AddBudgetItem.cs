@@ -18,6 +18,11 @@ namespace SimpleBudgeting
         bool isAFund;
         decimal fundGoal;
         string connectionString;
+        SqlConnection con = new SqlConnection(@"Data Source=TEST-MACHINE-RI;Initial Catalog=simpleBudgetDB;Integrated Security=True");
+        SqlCommand cmd;
+        DataTable dt;
+        SqlDataAdapter da;
+        DataSet ds;
 
         public AddBudgetItem()
         {
@@ -60,7 +65,9 @@ namespace SimpleBudgeting
 
         private void AddBgtItmDoneBttn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
+            
+            Close();
         }
 
 

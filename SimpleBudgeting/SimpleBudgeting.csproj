@@ -54,6 +54,8 @@
     <Reference Include="System.Data.SQLite.Linq, Version=1.0.114.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.114.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItems.cs" />
     <Compile Include="Forms\AddBudgetItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +80,36 @@
     <Compile Include="Forms\StartupPage.Designer.cs">
       <DependentUpon>StartupPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="overviewTable.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>overviewTable.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="overviewTable.cs">
+      <DependentUpon>overviewTable.tt</DependentUpon>
+    </Compile>
+    <Compile Include="overviewTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>overviewTable.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="overviewTable1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>overviewTable.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="simpleBudgetDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>simpleBudgetDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="simpleBudgetDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>simpleBudgetDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\AddBudgetItem.resx">
       <DependentUpon>AddBudgetItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,6 +125,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="overviewTable.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>overviewTable.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="overviewTable.edmx.diagram">
+      <DependentUpon>overviewTable.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -104,9 +142,46 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="simpleBudgetDBDataSet.xsc">
+      <DependentUpon>simpleBudgetDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="simpleBudgetDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>simpleBudgetDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="simpleBudgetDBDataSet.xss">
+      <DependentUpon>simpleBudgetDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="simpleBudgetDBDataSet1.xsc">
+      <DependentUpon>simpleBudgetDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="simpleBudgetDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>simpleBudgetDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="simpleBudgetDBDataSet1.xss">
+      <DependentUpon>simpleBudgetDBDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="overviewTable.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>overviewTable.edmx</DependentUpon>
+      <LastGenOutput>overviewTable.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="overviewTable.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>overviewTable.edmx</DependentUpon>
+      <LastGenOutput>overviewTable1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
