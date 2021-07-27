@@ -71,6 +71,16 @@
     <Compile Include="AddItems.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="budgetDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="budgetItemStorageTable.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddBudgetItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +110,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="budgetDBDataSet.xsc">
+      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="budgetDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>budgetDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="budgetDBDataSet.xss">
+      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="budgetItemStorageTable.xsc">
+      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+    </None>
+    <None Include="budgetItemStorageTable.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>budgetItemStorageTable.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="budgetItemStorageTable.xss">
+      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

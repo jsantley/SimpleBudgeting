@@ -29,6 +29,7 @@ namespace SimpleBudgeting
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nameBudgetItemlbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bgtItemNmetxtBox = new System.Windows.Forms.TextBox();
@@ -43,9 +44,11 @@ namespace SimpleBudgeting
             this.isFund = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.myfundGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backToOverviewButton = new System.Windows.Forms.Button();
+            this.budgetItemStorageTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.budgetItemStorageTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nameBudgetItemlbl
@@ -179,6 +182,16 @@ namespace SimpleBudgeting
             this.backToOverviewButton.UseVisualStyleBackColor = true;
             this.backToOverviewButton.Click += new System.EventHandler(this.backToOverviewButton_Click);
             // 
+            // budgetDBDataSet
+            // 
+            // 
+            // budgetItemStorageTableBindingSource
+            // 
+            this.budgetItemStorageTableBindingSource.DataMember = "budgetItemStorageTable";
+            // 
+            // budgetItemStorageTableTableAdapter
+            // 
+            // 
             // AddBudgetItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +212,7 @@ namespace SimpleBudgeting
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.budgetItemStorageTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +234,6 @@ namespace SimpleBudgeting
         private System.Windows.Forms.DataGridViewTextBoxColumn isFund;
         private System.Windows.Forms.DataGridViewTextBoxColumn myfundGoal;
         private System.Windows.Forms.Button backToOverviewButton;
+        private System.Windows.Forms.BindingSource budgetItemStorageTableBindingSource;
     }
 }

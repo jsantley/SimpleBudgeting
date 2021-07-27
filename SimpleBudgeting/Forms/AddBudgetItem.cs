@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -54,24 +53,26 @@ namespace SimpleBudgeting
 
         private void AddBgtItmDoneBttn_Click(object sender, EventArgs e)
         {
-           
-
-           
-
-            dataGridView1.Rows.Add(bgtItemName,amtbudgetedMonthly.ToString(), isAFund, fundGoal.ToString());
-
-
-
-
-
-
-
-           
+            dataGridView1.Rows.Add(bgtItemName, amtbudgetedMonthly.ToString(), isAFund, fundGoal.ToString());
         }
 
         private void backToOverviewButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            SqlConnection connection = new SqlConnection(@"Data Source=TEST-MACHINE-RI;Initial Catalog=budgetDB;Integrated Security=True");
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                    SqlCommand cmd = new SqlCommand(@"INSERT INTO budgetItemStorageTable ([Budget Item], [Monthly Budget Amount], [Fund], [Fund Goal]) VALUES('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "')", connection);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    this.Close();
+
+            }
+
+
         }
+
+        
     }
 }

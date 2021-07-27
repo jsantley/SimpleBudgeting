@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using SimpleBudgeting;
 
 namespace SimpleBudgeting
 {
@@ -52,12 +43,13 @@ namespace SimpleBudgeting
 
         }
 
+        private void StartupPage_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'budgetItemStorageTable._budgetItemStorageTable' table. You can move, or remove it, as needed.
+            this.budgetItemStorageTableTableAdapter1.Fill(this.budgetItemStorageTable._budgetItemStorageTable);
+            // TODO: This line of code loads data into the 'budgetDBDataSet.budgetItemStorageTable' table. You can move, or remove it, as needed.
+            this.budgetItemStorageTableTableAdapter.Fill(this.budgetDBDataSet.budgetItemStorageTable);
 
-
-        
-
-       
-
-       
+        }
     }
 }
