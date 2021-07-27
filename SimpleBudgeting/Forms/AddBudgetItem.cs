@@ -56,11 +56,7 @@ namespace SimpleBudgeting
         {
            
 
-           /* dataGridView1.ColumnCount = 4;
-
-            int rowId = dataGridView1.Rows.Add();
-            DataGridViewRow row = dataGridView1.Rows[rowId];
-           */
+           
 
             dataGridView1.Rows.Add(bgtItemName,amtbudgetedMonthly.ToString(), isAFund, fundGoal.ToString());
 
