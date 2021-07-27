@@ -39,24 +39,13 @@ namespace SimpleBudgeting
             this.editTransaction = new System.Windows.Forms.Button();
             this.deletebgtItemBttn = new System.Windows.Forms.Button();
             this.refreshData = new System.Windows.Forms.Button();
-            this.overviewTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.simpleBudgetDBDataSet = new SimpleBudgeting.simpleBudgetDBDataSet();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.overviewTableTableAdapter = new SimpleBudgeting.simpleBudgetDBDataSetTableAdapters.overviewTableTableAdapter();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.simpleBudgetDBDataSet1 = new SimpleBudgeting.simpleBudgetDBDataSet1();
-            this.overviewTableBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.overviewTableTableAdapter1 = new SimpleBudgeting.simpleBudgetDBDataSet1TableAdapters.overviewTableTableAdapter();
-            this.budgetItemDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountBudgetedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.overviewTableGridView = new System.Windows.Forms.DataGridView();
+            this.itemTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.budgetItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amtBudgeted = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewTableBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleBudgetDBDataSet)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleBudgetDBDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewTableBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewTableGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemTableBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // totalPaycheckLabel
@@ -156,75 +145,32 @@ namespace SimpleBudgeting
             this.refreshData.UseVisualStyleBackColor = true;
             this.refreshData.Click += new System.EventHandler(this.refreshData_Click);
             // 
-            // overviewTableBindingSource
+            // overviewTableGridView
             // 
-            this.overviewTableBindingSource.DataMember = "overviewTable";
-            this.overviewTableBindingSource.DataSource = this.simpleBudgetDBDataSet;
+            this.overviewTableGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.overviewTableGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.budgetItem,
+            this.amtBudgeted});
+            this.overviewTableGridView.Location = new System.Drawing.Point(68, 181);
+            this.overviewTableGridView.Name = "overviewTableGridView";
+            this.overviewTableGridView.Size = new System.Drawing.Size(432, 150);
+            this.overviewTableGridView.TabIndex = 12;
             // 
-            // simpleBudgetDBDataSet
+            // itemTableBindingSource
             // 
-            this.simpleBudgetDBDataSet.DataSetName = "simpleBudgetDBDataSet";
-            this.simpleBudgetDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.itemTableBindingSource.DataMember = "itemTable";
             // 
-            // fillByToolStrip
+            // budgetItem
             // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(692, 25);
-            this.fillByToolStrip.TabIndex = 13;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.budgetItem.HeaderText = "Budget Item";
+            this.budgetItem.Name = "budgetItem";
+            this.budgetItem.ReadOnly = true;
             // 
-            // fillByToolStripButton
+            // amtBudgeted
             // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            // 
-            // overviewTableTableAdapter
-            // 
-            this.overviewTableTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.budgetItemDataGridViewTextBoxColumn,
-            this.amountBudgetedDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.overviewTableBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(56, 156);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(489, 212);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // simpleBudgetDBDataSet1
-            // 
-            this.simpleBudgetDBDataSet1.DataSetName = "simpleBudgetDBDataSet1";
-            this.simpleBudgetDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // overviewTableBindingSource1
-            // 
-            this.overviewTableBindingSource1.DataMember = "overviewTable";
-            this.overviewTableBindingSource1.DataSource = this.simpleBudgetDBDataSet1;
-            // 
-            // overviewTableTableAdapter1
-            // 
-            this.overviewTableTableAdapter1.ClearBeforeFill = true;
-            // 
-            // budgetItemDataGridViewTextBoxColumn
-            // 
-            this.budgetItemDataGridViewTextBoxColumn.DataPropertyName = "Budget Item";
-            this.budgetItemDataGridViewTextBoxColumn.HeaderText = "Budget Item";
-            this.budgetItemDataGridViewTextBoxColumn.Name = "budgetItemDataGridViewTextBoxColumn";
-            // 
-            // amountBudgetedDataGridViewTextBoxColumn
-            // 
-            this.amountBudgetedDataGridViewTextBoxColumn.DataPropertyName = "Amount Budgeted";
-            this.amountBudgetedDataGridViewTextBoxColumn.HeaderText = "Amount Budgeted";
-            this.amountBudgetedDataGridViewTextBoxColumn.Name = "amountBudgetedDataGridViewTextBoxColumn";
+            this.amtBudgeted.HeaderText = "Amount Budgeted";
+            this.amtBudgeted.Name = "amtBudgeted";
+            this.amtBudgeted.ReadOnly = true;
             // 
             // StartupPage
             // 
@@ -232,8 +178,7 @@ namespace SimpleBudgeting
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(692, 521);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.fillByToolStrip);
+            this.Controls.Add(this.overviewTableGridView);
             this.Controls.Add(this.refreshData);
             this.Controls.Add(this.deletebgtItemBttn);
             this.Controls.Add(this.editTransaction);
@@ -246,15 +191,9 @@ namespace SimpleBudgeting
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "StartupPage";
             this.Text = "Startup Page";
-            this.Load += new System.EventHandler(this.StartupPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.totalPaycheckTextBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewTableBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleBudgetDBDataSet)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.simpleBudgetDBDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.overviewTableBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.overviewTableGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemTableBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,17 +209,10 @@ namespace SimpleBudgeting
         private System.Windows.Forms.Button editTransaction;
         private System.Windows.Forms.Button deletebgtItemBttn;
         private System.Windows.Forms.Button refreshData;
-        private simpleBudgetDBDataSet simpleBudgetDBDataSet;
-        private System.Windows.Forms.BindingSource overviewTableBindingSource;
-        private simpleBudgetDBDataSetTableAdapters.overviewTableTableAdapter overviewTableTableAdapter;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private simpleBudgetDBDataSet1 simpleBudgetDBDataSet1;
-        private System.Windows.Forms.BindingSource overviewTableBindingSource1;
-        private simpleBudgetDBDataSet1TableAdapters.overviewTableTableAdapter overviewTableTableAdapter1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn budgetItemDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountBudgetedDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridView overviewTableGridView;
+        private System.Windows.Forms.BindingSource itemTableBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn budgetItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amtBudgeted;
     }
 }
 

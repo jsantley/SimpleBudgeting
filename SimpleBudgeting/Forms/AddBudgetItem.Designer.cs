@@ -37,8 +37,15 @@ namespace SimpleBudgeting
             this.goalLabel = new System.Windows.Forms.Label();
             this.goalTextBox = new System.Windows.Forms.NumericUpDown();
             this.AddBgtItmDoneBttn = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.budgetItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnthlyBudgetAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isFund = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myfundGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backToOverviewButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // nameBudgetItemlbl
@@ -65,6 +72,7 @@ namespace SimpleBudgeting
             this.bgtItemNmetxtBox.Name = "bgtItemNmetxtBox";
             this.bgtItemNmetxtBox.Size = new System.Drawing.Size(146, 20);
             this.bgtItemNmetxtBox.TabIndex = 2;
+            this.bgtItemNmetxtBox.TextChanged += new System.EventHandler(this.bgtItemNmetxtBox_TextChanged);
             // 
             // amtBudgeted
             // 
@@ -79,6 +87,7 @@ namespace SimpleBudgeting
             this.amtBudgeted.Size = new System.Drawing.Size(146, 20);
             this.amtBudgeted.TabIndex = 3;
             this.amtBudgeted.ThousandsSeparator = true;
+            this.amtBudgeted.ValueChanged += new System.EventHandler(this.amtBudgeted_ValueChanged);
             // 
             // isAFundcheckBx
             // 
@@ -104,27 +113,79 @@ namespace SimpleBudgeting
             // goalTextBox
             // 
             this.goalTextBox.Location = new System.Drawing.Point(218, 211);
+            this.goalTextBox.Maximum = new decimal(new int[] {
+            -1593835520,
+            466537709,
+            54210,
+            0});
             this.goalTextBox.Name = "goalTextBox";
             this.goalTextBox.Size = new System.Drawing.Size(146, 20);
             this.goalTextBox.TabIndex = 6;
+            this.goalTextBox.ThousandsSeparator = true;
             this.goalTextBox.Visible = false;
             this.goalTextBox.ValueChanged += new System.EventHandler(this.goalTextBox_ValueChanged);
             // 
             // AddBgtItmDoneBttn
             // 
-            this.AddBgtItmDoneBttn.Location = new System.Drawing.Point(165, 259);
+            this.AddBgtItmDoneBttn.Location = new System.Drawing.Point(15, 272);
             this.AddBgtItmDoneBttn.Name = "AddBgtItmDoneBttn";
-            this.AddBgtItmDoneBttn.Size = new System.Drawing.Size(75, 23);
+            this.AddBgtItmDoneBttn.Size = new System.Drawing.Size(105, 23);
             this.AddBgtItmDoneBttn.TabIndex = 7;
-            this.AddBgtItmDoneBttn.Text = "Done";
+            this.AddBgtItmDoneBttn.Text = "Add Budget Item";
             this.AddBgtItmDoneBttn.UseVisualStyleBackColor = true;
             this.AddBgtItmDoneBttn.Click += new System.EventHandler(this.AddBgtItmDoneBttn_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.budgetItem,
+            this.mnthlyBudgetAmount,
+            this.isFund,
+            this.myfundGoal});
+            this.dataGridView1.Location = new System.Drawing.Point(393, 65);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(393, 217);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // budgetItem
+            // 
+            this.budgetItem.HeaderText = "Budget Item";
+            this.budgetItem.Name = "budgetItem";
+            // 
+            // mnthlyBudgetAmount
+            // 
+            this.mnthlyBudgetAmount.HeaderText = "Monthly Budget Amount";
+            this.mnthlyBudgetAmount.Name = "mnthlyBudgetAmount";
+            // 
+            // isFund
+            // 
+            this.isFund.HeaderText = "Fund";
+            this.isFund.Name = "isFund";
+            this.isFund.Width = 50;
+            // 
+            // myfundGoal
+            // 
+            this.myfundGoal.HeaderText = "Fund Goal";
+            this.myfundGoal.Name = "myfundGoal";
+            // 
+            // backToOverviewButton
+            // 
+            this.backToOverviewButton.Location = new System.Drawing.Point(218, 272);
+            this.backToOverviewButton.Name = "backToOverviewButton";
+            this.backToOverviewButton.Size = new System.Drawing.Size(105, 23);
+            this.backToOverviewButton.TabIndex = 9;
+            this.backToOverviewButton.Text = "Back to Overview";
+            this.backToOverviewButton.UseVisualStyleBackColor = true;
+            this.backToOverviewButton.Click += new System.EventHandler(this.backToOverviewButton_Click);
             // 
             // AddBudgetItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 306);
+            this.ClientSize = new System.Drawing.Size(839, 373);
+            this.Controls.Add(this.backToOverviewButton);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AddBgtItmDoneBttn);
             this.Controls.Add(this.goalTextBox);
             this.Controls.Add(this.goalLabel);
@@ -137,6 +198,7 @@ namespace SimpleBudgeting
             this.Text = "AddBudgetItem";
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,5 +214,11 @@ namespace SimpleBudgeting
         private System.Windows.Forms.Label goalLabel;
         private System.Windows.Forms.NumericUpDown goalTextBox;
         private System.Windows.Forms.Button AddBgtItmDoneBttn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn budgetItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mnthlyBudgetAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isFund;
+        private System.Windows.Forms.DataGridViewTextBoxColumn myfundGoal;
+        private System.Windows.Forms.Button backToOverviewButton;
     }
 }

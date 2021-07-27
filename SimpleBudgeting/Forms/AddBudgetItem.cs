@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -13,23 +7,18 @@ namespace SimpleBudgeting
 {
     public partial class AddBudgetItem : Form
     {
-        string bgtItemName;
+        private string bgtItemName = "No Name";
         decimal amtbudgetedMonthly;
-        bool isAFund;
+        private bool isAFund = false;
         decimal fundGoal;
-        string connectionString;
-        SqlConnection con = new SqlConnection(@"Data Source=TEST-MACHINE-RI;Initial Catalog=simpleBudgetDB;Integrated Security=True");
-        SqlCommand cmd;
-        DataTable dt;
-        SqlDataAdapter da;
-        DataSet ds;
+        
 
         public AddBudgetItem()
         {
             InitializeComponent();
         }
 
-
+        
 
         private void bgtItemNmetxtBox_TextChanged(object sender, EventArgs e)
         {
@@ -65,11 +54,28 @@ namespace SimpleBudgeting
 
         private void AddBgtItmDoneBttn_Click(object sender, EventArgs e)
         {
-            
-            
-            Close();
+           
+
+           /* dataGridView1.ColumnCount = 4;
+
+            int rowId = dataGridView1.Rows.Add();
+            DataGridViewRow row = dataGridView1.Rows[rowId];
+           */
+
+            dataGridView1.Rows.Add(bgtItemName,amtbudgetedMonthly.ToString(), isAFund, fundGoal.ToString());
+
+
+
+
+
+
+
+           
         }
 
-
+        private void backToOverviewButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

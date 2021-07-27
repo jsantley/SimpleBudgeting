@@ -45,24 +45,19 @@ namespace SimpleBudgeting
 
         }
 
-        private void refreshData_Click(object sender, EventArgs e)
+        public void refreshData_Click(object sender, EventArgs e)
         {
-           
+            
+
 
         }
+
+
 
         
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+       
 
-        }
-
-        private void StartupPage_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'simpleBudgetDBDataSet1.overviewTable' table. You can move, or remove it, as needed.
-            this.overviewTableTableAdapter1.Fill(this.simpleBudgetDBDataSet1.overviewTable);
-
-        }
+       
     }
 }
