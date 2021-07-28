@@ -7,10 +7,12 @@ namespace SimpleBudgeting
     public partial class AddBudgetItem : Form
     {
         private string bgtItemName = "No Name";
-        decimal amtbudgetedMonthly;
+        static decimal amtbudgetedMonthly;
         private bool isAFund = false;
         decimal fundGoal;
-        
+        decimal amtRemaining = amtbudgetedMonthly;
+
+
 
         public AddBudgetItem()
         {
@@ -28,6 +30,8 @@ namespace SimpleBudgeting
         private void amtBudgeted_ValueChanged(object sender, EventArgs e)
         {
             amtbudgetedMonthly = amtBudgeted.Value;
+            amtRemaining = amtbudgetedMonthly;
+
         }
 
         private void isAFundcheckBx_CheckedChanged(object sender, EventArgs e)
@@ -53,7 +57,8 @@ namespace SimpleBudgeting
 
         private void AddBgtItmDoneBttn_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add(bgtItemName, amtbudgetedMonthly.ToString(), isAFund, fundGoal.ToString());
+            StartupPage sp = new StartupPage();
+            dataGridView1.Rows.Add(sp.userID, bgtItemName, amtbudgetedMonthly.ToString(), amtRemaining.ToString() , isAFund, fundGoal.ToString());
         }
 
         private void backToOverviewButton_Click(object sender, EventArgs e)
@@ -62,11 +67,21 @@ namespace SimpleBudgeting
 
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
-                    SqlCommand cmd = new SqlCommand(@"INSERT INTO budgetItemStorageTable ([Budget Item], [Monthly Budget Amount], [Fund], [Fund Goal]) VALUES('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "')", connection);
+                try
+                {
+                    SqlCommand cmd = new SqlCommand(@"INSERT INTO BudgetItems ([UserID], [Budget Item], [Amount Budgeted], [Amount Remaining], [Fund], [Fund Goal]) VALUES('" + dataGridView1.Rows[i].Cells[0].Value + "','" + dataGridView1.Rows[i].Cells[1].Value + "','" + dataGridView1.Rows[i].Cells[2].Value + "','" + dataGridView1.Rows[i].Cells[3].Value + "','" + dataGridView1.Rows[i].Cells[4].Value + "','" + dataGridView1.Rows[i].Cells[5].Value + "')", connection);
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     connection.Close();
                     this.Close();
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    MessageBox.Show("Database Error!");
+                    throw;
+                }
+                    
 
             }
 

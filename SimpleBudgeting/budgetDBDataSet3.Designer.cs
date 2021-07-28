@@ -20,17 +20,17 @@ namespace SimpleBudgeting {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("budgetItemStorageTable")]
+    [global::System.Xml.Serialization.XmlRootAttribute("budgetDBDataSet3")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class budgetItemStorageTable : global::System.Data.DataSet {
+    public partial class budgetDBDataSet3 : global::System.Data.DataSet {
         
-        private budgetItemStorageTableDataTable tablebudgetItemStorageTable;
+        private BudgetItemsDataTable tableBudgetItems;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public budgetItemStorageTable() {
+        public budgetDBDataSet3() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SimpleBudgeting {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected budgetItemStorageTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected budgetDBDataSet3(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace SimpleBudgeting {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["budgetItemStorageTable"] != null)) {
-                    base.Tables.Add(new budgetItemStorageTableDataTable(ds.Tables["budgetItemStorageTable"]));
+                if ((ds.Tables["BudgetItems"] != null)) {
+                    base.Tables.Add(new BudgetItemsDataTable(ds.Tables["BudgetItems"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace SimpleBudgeting {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public budgetItemStorageTableDataTable _budgetItemStorageTable {
+        public BudgetItemsDataTable BudgetItems {
             get {
-                return this.tablebudgetItemStorageTable;
+                return this.tableBudgetItems;
             }
         }
         
@@ -127,7 +127,7 @@ namespace SimpleBudgeting {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            budgetItemStorageTable cln = ((budgetItemStorageTable)(base.Clone()));
+            budgetDBDataSet3 cln = ((budgetDBDataSet3)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace SimpleBudgeting {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["budgetItemStorageTable"] != null)) {
-                    base.Tables.Add(new budgetItemStorageTableDataTable(ds.Tables["budgetItemStorageTable"]));
+                if ((ds.Tables["BudgetItems"] != null)) {
+                    base.Tables.Add(new BudgetItemsDataTable(ds.Tables["BudgetItems"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace SimpleBudgeting {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablebudgetItemStorageTable = ((budgetItemStorageTableDataTable)(base.Tables["budgetItemStorageTable"]));
+            this.tableBudgetItems = ((BudgetItemsDataTable)(base.Tables["BudgetItems"]));
             if ((initTable == true)) {
-                if ((this.tablebudgetItemStorageTable != null)) {
-                    this.tablebudgetItemStorageTable.InitVars();
+                if ((this.tableBudgetItems != null)) {
+                    this.tableBudgetItems.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace SimpleBudgeting {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "budgetItemStorageTable";
+            this.DataSetName = "budgetDBDataSet3";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/budgetItemStorageTable.xsd";
+            this.Namespace = "http://tempuri.org/budgetDBDataSet3.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablebudgetItemStorageTable = new budgetItemStorageTableDataTable();
-            base.Tables.Add(this.tablebudgetItemStorageTable);
+            this.tableBudgetItems = new BudgetItemsDataTable();
+            base.Tables.Add(this.tableBudgetItems);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerialize_budgetItemStorageTable() {
+        private bool ShouldSerializeBudgetItems() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace SimpleBudgeting {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            budgetItemStorageTable ds = new budgetItemStorageTable();
+            budgetDBDataSet3 ds = new budgetDBDataSet3();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,18 +270,22 @@ namespace SimpleBudgeting {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void budgetItemStorageTableRowChangeEventHandler(object sender, budgetItemStorageTableRowChangeEvent e);
+        public delegate void BudgetItemsRowChangeEventHandler(object sender, BudgetItemsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class budgetItemStorageTableDataTable : global::System.Data.TypedTableBase<budgetItemStorageTableRow> {
+        public partial class BudgetItemsDataTable : global::System.Data.TypedTableBase<BudgetItemsRow> {
+            
+            private global::System.Data.DataColumn columnUserID;
             
             private global::System.Data.DataColumn columnBudget_Item;
             
-            private global::System.Data.DataColumn columnMonthly_Budget_Amount;
+            private global::System.Data.DataColumn columnAmount_Budgeted;
+            
+            private global::System.Data.DataColumn columnAmount_Remaining;
             
             private global::System.Data.DataColumn columnFund;
             
@@ -289,8 +293,8 @@ namespace SimpleBudgeting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableDataTable() {
-                this.TableName = "budgetItemStorageTable";
+            public BudgetItemsDataTable() {
+                this.TableName = "BudgetItems";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +302,7 @@ namespace SimpleBudgeting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal budgetItemStorageTableDataTable(global::System.Data.DataTable table) {
+            internal BudgetItemsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,9 +319,17 @@ namespace SimpleBudgeting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected budgetItemStorageTableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BudgetItemsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn UserIDColumn {
+                get {
+                    return this.columnUserID;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -330,9 +342,17 @@ namespace SimpleBudgeting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Monthly_Budget_AmountColumn {
+            public global::System.Data.DataColumn Amount_BudgetedColumn {
                 get {
-                    return this.columnMonthly_Budget_Amount;
+                    return this.columnAmount_Budgeted;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Amount_RemainingColumn {
+                get {
+                    return this.columnAmount_Remaining;
                 }
             }
             
@@ -363,55 +383,57 @@ namespace SimpleBudgeting {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRow this[int index] {
+            public BudgetItemsRow this[int index] {
                 get {
-                    return ((budgetItemStorageTableRow)(this.Rows[index]));
+                    return ((BudgetItemsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event budgetItemStorageTableRowChangeEventHandler budgetItemStorageTableRowChanging;
+            public event BudgetItemsRowChangeEventHandler BudgetItemsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event budgetItemStorageTableRowChangeEventHandler budgetItemStorageTableRowChanged;
+            public event BudgetItemsRowChangeEventHandler BudgetItemsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event budgetItemStorageTableRowChangeEventHandler budgetItemStorageTableRowDeleting;
+            public event BudgetItemsRowChangeEventHandler BudgetItemsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event budgetItemStorageTableRowChangeEventHandler budgetItemStorageTableRowDeleted;
+            public event BudgetItemsRowChangeEventHandler BudgetItemsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddbudgetItemStorageTableRow(budgetItemStorageTableRow row) {
+            public void AddBudgetItemsRow(BudgetItemsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRow AddbudgetItemStorageTableRow(string Budget_Item, decimal Monthly_Budget_Amount, string Fund, decimal Fund_Goal) {
-                budgetItemStorageTableRow rowbudgetItemStorageTableRow = ((budgetItemStorageTableRow)(this.NewRow()));
+            public BudgetItemsRow AddBudgetItemsRow(int UserID, string Budget_Item, decimal Amount_Budgeted, decimal Amount_Remaining, string Fund, decimal Fund_Goal) {
+                BudgetItemsRow rowBudgetItemsRow = ((BudgetItemsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        UserID,
                         Budget_Item,
-                        Monthly_Budget_Amount,
+                        Amount_Budgeted,
+                        Amount_Remaining,
                         Fund,
                         Fund_Goal};
-                rowbudgetItemStorageTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowbudgetItemStorageTableRow);
-                return rowbudgetItemStorageTableRow;
+                rowBudgetItemsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBudgetItemsRow);
+                return rowBudgetItemsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRow FindByBudget_Item(string Budget_Item) {
-                return ((budgetItemStorageTableRow)(this.Rows.Find(new object[] {
+            public BudgetItemsRow FindByBudget_Item(string Budget_Item) {
+                return ((BudgetItemsRow)(this.Rows.Find(new object[] {
                             Budget_Item})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                budgetItemStorageTableDataTable cln = ((budgetItemStorageTableDataTable)(base.Clone()));
+                BudgetItemsDataTable cln = ((BudgetItemsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,14 +441,16 @@ namespace SimpleBudgeting {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new budgetItemStorageTableDataTable();
+                return new BudgetItemsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnUserID = base.Columns["UserID"];
                 this.columnBudget_Item = base.Columns["Budget Item"];
-                this.columnMonthly_Budget_Amount = base.Columns["Monthly Budget Amount"];
+                this.columnAmount_Budgeted = base.Columns["Amount Budgeted"];
+                this.columnAmount_Remaining = base.Columns["Amount Remaining"];
                 this.columnFund = base.Columns["Fund"];
                 this.columnFund_Goal = base.Columns["Fund Goal"];
             }
@@ -434,49 +458,55 @@ namespace SimpleBudgeting {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnUserID = new global::System.Data.DataColumn("UserID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUserID);
                 this.columnBudget_Item = new global::System.Data.DataColumn("Budget Item", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBudget_Item);
-                this.columnMonthly_Budget_Amount = new global::System.Data.DataColumn("Monthly Budget Amount", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonthly_Budget_Amount);
+                this.columnAmount_Budgeted = new global::System.Data.DataColumn("Amount Budgeted", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount_Budgeted);
+                this.columnAmount_Remaining = new global::System.Data.DataColumn("Amount Remaining", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount_Remaining);
                 this.columnFund = new global::System.Data.DataColumn("Fund", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFund);
                 this.columnFund_Goal = new global::System.Data.DataColumn("Fund Goal", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFund_Goal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnBudget_Item}, true));
+                this.columnUserID.AllowDBNull = false;
                 this.columnBudget_Item.AllowDBNull = false;
                 this.columnBudget_Item.Unique = true;
                 this.columnBudget_Item.MaxLength = 50;
-                this.columnMonthly_Budget_Amount.AllowDBNull = false;
-                this.columnFund.MaxLength = 10;
-                this.ExtendedProperties.Add("Generator_TablePropName", "_budgetItemStorageTable");
-                this.ExtendedProperties.Add("Generator_UserTableName", "budgetItemStorageTable");
+                this.columnAmount_Budgeted.AllowDBNull = false;
+                this.columnAmount_Remaining.AllowDBNull = false;
+                this.columnFund.AllowDBNull = false;
+                this.columnFund.MaxLength = 50;
+                this.columnFund_Goal.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRow NewbudgetItemStorageTableRow() {
-                return ((budgetItemStorageTableRow)(this.NewRow()));
+            public BudgetItemsRow NewBudgetItemsRow() {
+                return ((BudgetItemsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new budgetItemStorageTableRow(builder);
+                return new BudgetItemsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(budgetItemStorageTableRow);
+                return typeof(BudgetItemsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.budgetItemStorageTableRowChanged != null)) {
-                    this.budgetItemStorageTableRowChanged(this, new budgetItemStorageTableRowChangeEvent(((budgetItemStorageTableRow)(e.Row)), e.Action));
+                if ((this.BudgetItemsRowChanged != null)) {
+                    this.BudgetItemsRowChanged(this, new BudgetItemsRowChangeEvent(((BudgetItemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -484,8 +514,8 @@ namespace SimpleBudgeting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.budgetItemStorageTableRowChanging != null)) {
-                    this.budgetItemStorageTableRowChanging(this, new budgetItemStorageTableRowChangeEvent(((budgetItemStorageTableRow)(e.Row)), e.Action));
+                if ((this.BudgetItemsRowChanging != null)) {
+                    this.BudgetItemsRowChanging(this, new BudgetItemsRowChangeEvent(((BudgetItemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -493,8 +523,8 @@ namespace SimpleBudgeting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.budgetItemStorageTableRowDeleted != null)) {
-                    this.budgetItemStorageTableRowDeleted(this, new budgetItemStorageTableRowChangeEvent(((budgetItemStorageTableRow)(e.Row)), e.Action));
+                if ((this.BudgetItemsRowDeleted != null)) {
+                    this.BudgetItemsRowDeleted(this, new BudgetItemsRowChangeEvent(((BudgetItemsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -502,14 +532,14 @@ namespace SimpleBudgeting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.budgetItemStorageTableRowDeleting != null)) {
-                    this.budgetItemStorageTableRowDeleting(this, new budgetItemStorageTableRowChangeEvent(((budgetItemStorageTableRow)(e.Row)), e.Action));
+                if ((this.BudgetItemsRowDeleting != null)) {
+                    this.BudgetItemsRowDeleting(this, new BudgetItemsRowChangeEvent(((BudgetItemsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovebudgetItemStorageTableRow(budgetItemStorageTableRow row) {
+            public void RemoveBudgetItemsRow(BudgetItemsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -518,7 +548,7 @@ namespace SimpleBudgeting {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                budgetItemStorageTable ds = new budgetItemStorageTable();
+                budgetDBDataSet3 ds = new budgetDBDataSet3();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -536,7 +566,7 @@ namespace SimpleBudgeting {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "budgetItemStorageTableDataTable";
+                attribute2.FixedValue = "BudgetItemsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -580,36 +610,58 @@ namespace SimpleBudgeting {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class budgetItemStorageTableRow : global::System.Data.DataRow {
+        public partial class BudgetItemsRow : global::System.Data.DataRow {
             
-            private budgetItemStorageTableDataTable tablebudgetItemStorageTable;
+            private BudgetItemsDataTable tableBudgetItems;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal budgetItemStorageTableRow(global::System.Data.DataRowBuilder rb) : 
+            internal BudgetItemsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablebudgetItemStorageTable = ((budgetItemStorageTableDataTable)(this.Table));
+                this.tableBudgetItems = ((BudgetItemsDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int UserID {
+                get {
+                    return ((int)(this[this.tableBudgetItems.UserIDColumn]));
+                }
+                set {
+                    this[this.tableBudgetItems.UserIDColumn] = value;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Budget_Item {
                 get {
-                    return ((string)(this[this.tablebudgetItemStorageTable.Budget_ItemColumn]));
+                    return ((string)(this[this.tableBudgetItems.Budget_ItemColumn]));
                 }
                 set {
-                    this[this.tablebudgetItemStorageTable.Budget_ItemColumn] = value;
+                    this[this.tableBudgetItems.Budget_ItemColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal Monthly_Budget_Amount {
+            public decimal Amount_Budgeted {
                 get {
-                    return ((decimal)(this[this.tablebudgetItemStorageTable.Monthly_Budget_AmountColumn]));
+                    return ((decimal)(this[this.tableBudgetItems.Amount_BudgetedColumn]));
                 }
                 set {
-                    this[this.tablebudgetItemStorageTable.Monthly_Budget_AmountColumn] = value;
+                    this[this.tableBudgetItems.Amount_BudgetedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal Amount_Remaining {
+                get {
+                    return ((decimal)(this[this.tableBudgetItems.Amount_RemainingColumn]));
+                }
+                set {
+                    this[this.tableBudgetItems.Amount_RemainingColumn] = value;
                 }
             }
             
@@ -617,15 +669,10 @@ namespace SimpleBudgeting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Fund {
                 get {
-                    try {
-                        return ((string)(this[this.tablebudgetItemStorageTable.FundColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Fund\' in table \'budgetItemStorageTable\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableBudgetItems.FundColumn]));
                 }
                 set {
-                    this[this.tablebudgetItemStorageTable.FundColumn] = value;
+                    this[this.tableBudgetItems.FundColumn] = value;
                 }
             }
             
@@ -633,40 +680,11 @@ namespace SimpleBudgeting {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Fund_Goal {
                 get {
-                    try {
-                        return ((decimal)(this[this.tablebudgetItemStorageTable.Fund_GoalColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Fund Goal\' in table \'budgetItemStorageTable\' is DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableBudgetItems.Fund_GoalColumn]));
                 }
                 set {
-                    this[this.tablebudgetItemStorageTable.Fund_GoalColumn] = value;
+                    this[this.tableBudgetItems.Fund_GoalColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFundNull() {
-                return this.IsNull(this.tablebudgetItemStorageTable.FundColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFundNull() {
-                this[this.tablebudgetItemStorageTable.FundColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFund_GoalNull() {
-                return this.IsNull(this.tablebudgetItemStorageTable.Fund_GoalColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFund_GoalNull() {
-                this[this.tablebudgetItemStorageTable.Fund_GoalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -674,22 +692,22 @@ namespace SimpleBudgeting {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class budgetItemStorageTableRowChangeEvent : global::System.EventArgs {
+        public class BudgetItemsRowChangeEvent : global::System.EventArgs {
             
-            private budgetItemStorageTableRow eventRow;
+            private BudgetItemsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRowChangeEvent(budgetItemStorageTableRow row, global::System.Data.DataRowAction action) {
+            public BudgetItemsRowChangeEvent(BudgetItemsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public budgetItemStorageTableRow Row {
+            public BudgetItemsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -705,7 +723,7 @@ namespace SimpleBudgeting {
         }
     }
 }
-namespace SimpleBudgeting.budgetItemStorageTableTableAdapters {
+namespace SimpleBudgeting.budgetDBDataSet3TableAdapters {
     
     
     /// <summary>
@@ -717,7 +735,7 @@ namespace SimpleBudgeting.budgetItemStorageTableTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class budgetItemStorageTableTableAdapter : global::System.ComponentModel.Component {
+    public partial class BudgetItemsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -731,7 +749,7 @@ namespace SimpleBudgeting.budgetItemStorageTableTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public budgetItemStorageTableTableAdapter() {
+        public BudgetItemsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -828,45 +846,51 @@ namespace SimpleBudgeting.budgetItemStorageTableTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "budgetItemStorageTable";
+            tableMapping.DataSetTable = "BudgetItems";
+            tableMapping.ColumnMappings.Add("UserID", "UserID");
             tableMapping.ColumnMappings.Add("Budget Item", "Budget Item");
-            tableMapping.ColumnMappings.Add("Monthly Budget Amount", "Monthly Budget Amount");
+            tableMapping.ColumnMappings.Add("Amount Budgeted", "Amount Budgeted");
+            tableMapping.ColumnMappings.Add("Amount Remaining", "Amount Remaining");
             tableMapping.ColumnMappings.Add("Fund", "Fund");
             tableMapping.ColumnMappings.Add("Fund Goal", "Fund Goal");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[budgetItemStorageTable] WHERE (([Budget Item] = @Original_Budget_Item) AND ([Monthly Budget Amount] = @Original_Monthly_Budget_Amount) AND ((@IsNull_Fund = 1 AND [Fund] IS NULL) OR ([Fund] = @Original_Fund)) AND ((@IsNull_Fund_Goal = 1 AND [Fund Goal] IS NULL) OR ([Fund Goal] = @Original_Fund_Goal)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[BudgetItems] WHERE (([UserID] = @Original_UserID) AND ([Budget Item] = @Original_Budget_Item) AND ([Amount Budgeted] = @Original_Amount_Budgeted) AND ([Amount Remaining] = @Original_Amount_Remaining) AND ([Fund] = @Original_Fund) AND ([Fund Goal] = @Original_Fund_Goal))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Budget_Item", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Budget Item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Monthly_Budget_Amount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Monthly Budget Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Budgeted", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Budgeted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Remaining", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Remaining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_Goal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund Goal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_Goal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Fund Goal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[budgetItemStorageTable] ([Budget Item], [Monthly Budget Amount], [Fund], [Fund Goal]) VALUES (@Budget_Item, @Monthly_Budget_Amount, @Fund, @Fund_Goal);
-SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItemStorageTable WHERE ([Budget Item] = @Budget_Item)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[BudgetItems] ([UserID], [Budget Item], [Amount Budgeted], [Amount Remaining], [Fund], [Fund Goal]) VALUES (@UserID, @Budget_Item, @Amount_Budgeted, @Amount_Remaining, @Fund, @Fund_Goal);
+SELECT UserID, [Budget Item], [Amount Budgeted], [Amount Remaining], Fund, [Fund Goal] FROM BudgetItems WHERE ([Budget Item] = @Budget_Item)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Budget_Item", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Budget Item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Monthly_Budget_Amount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Monthly Budget Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Budgeted", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Budgeted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Remaining", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Remaining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Goal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Fund Goal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[budgetItemStorageTable] SET [Budget Item] = @Budget_Item, [Monthly Budget Amount] = @Monthly_Budget_Amount, [Fund] = @Fund, [Fund Goal] = @Fund_Goal WHERE (([Budget Item] = @Original_Budget_Item) AND ([Monthly Budget Amount] = @Original_Monthly_Budget_Amount) AND ((@IsNull_Fund = 1 AND [Fund] IS NULL) OR ([Fund] = @Original_Fund)) AND ((@IsNull_Fund_Goal = 1 AND [Fund Goal] IS NULL) OR ([Fund Goal] = @Original_Fund_Goal)));
-SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItemStorageTable WHERE ([Budget Item] = @Budget_Item)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[BudgetItems] SET [UserID] = @UserID, [Budget Item] = @Budget_Item, [Amount Budgeted] = @Amount_Budgeted, [Amount Remaining] = @Amount_Remaining, [Fund] = @Fund, [Fund Goal] = @Fund_Goal WHERE (([UserID] = @Original_UserID) AND ([Budget Item] = @Original_Budget_Item) AND ([Amount Budgeted] = @Original_Amount_Budgeted) AND ([Amount Remaining] = @Original_Amount_Remaining) AND ([Fund] = @Original_Fund) AND ([Fund Goal] = @Original_Fund_Goal));
+SELECT UserID, [Budget Item], [Amount Budgeted], [Amount Remaining], Fund, [Fund Goal] FROM BudgetItems WHERE ([Budget Item] = @Budget_Item)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Budget_Item", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Budget Item", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Monthly_Budget_Amount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Monthly Budget Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Budgeted", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Budgeted", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Remaining", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Remaining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Fund_Goal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Fund Goal", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UserID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UserID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Budget_Item", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Budget Item", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Monthly_Budget_Amount", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Monthly Budget Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Budgeted", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Budgeted", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Remaining", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Amount Remaining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Fund_Goal", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Fund Goal", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Fund_Goal", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "Fund Goal", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -883,8 +907,8 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM dbo.budgetI" +
-                "temStorageTable";
+            this._commandCollection[0].CommandText = "SELECT UserID, [Budget Item], [Amount Budgeted], [Amount Remaining], Fund, [Fund " +
+                "Goal] FROM dbo.BudgetItems";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -892,7 +916,7 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(budgetItemStorageTable.budgetItemStorageTableDataTable dataTable) {
+        public virtual int Fill(budgetDBDataSet3.BudgetItemsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -905,9 +929,9 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual budgetItemStorageTable.budgetItemStorageTableDataTable GetData() {
+        public virtual budgetDBDataSet3.BudgetItemsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            budgetItemStorageTable.budgetItemStorageTableDataTable dataTable = new budgetItemStorageTable.budgetItemStorageTableDataTable();
+            budgetDBDataSet3.BudgetItemsDataTable dataTable = new budgetDBDataSet3.BudgetItemsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -915,15 +939,15 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(budgetItemStorageTable.budgetItemStorageTableDataTable dataTable) {
+        public virtual int Update(budgetDBDataSet3.BudgetItemsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(budgetItemStorageTable dataSet) {
-            return this.Adapter.Update(dataSet, "budgetItemStorageTable");
+        public virtual int Update(budgetDBDataSet3 dataSet) {
+            return this.Adapter.Update(dataSet, "BudgetItems");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -945,30 +969,23 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_Budget_Item, decimal Original_Monthly_Budget_Amount, string Original_Fund, global::System.Nullable<decimal> Original_Fund_Goal) {
+        public virtual int Delete(int Original_UserID, string Original_Budget_Item, decimal Original_Amount_Budgeted, decimal Original_Amount_Remaining, string Original_Fund, decimal Original_Fund_Goal) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UserID));
             if ((Original_Budget_Item == null)) {
                 throw new global::System.ArgumentNullException("Original_Budget_Item");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Budget_Item));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Budget_Item));
             }
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_Monthly_Budget_Amount));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((decimal)(Original_Amount_Budgeted));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_Amount_Remaining));
             if ((Original_Fund == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Fund");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Fund));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Fund));
             }
-            if ((Original_Fund_Goal.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_Fund_Goal.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((decimal)(Original_Fund_Goal));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -989,26 +1006,23 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Budget_Item, decimal Monthly_Budget_Amount, string Fund, global::System.Nullable<decimal> Fund_Goal) {
+        public virtual int Insert(int UserID, string Budget_Item, decimal Amount_Budgeted, decimal Amount_Remaining, string Fund, decimal Fund_Goal) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(UserID));
             if ((Budget_Item == null)) {
                 throw new global::System.ArgumentNullException("Budget_Item");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Budget_Item));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Budget_Item));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(Monthly_Budget_Amount));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((decimal)(Amount_Budgeted));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Amount_Remaining));
             if ((Fund == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Fund");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Fund));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Fund));
             }
-            if ((Fund_Goal.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Fund_Goal.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((decimal)(Fund_Goal));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1029,49 +1043,39 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Budget_Item, decimal Monthly_Budget_Amount, string Fund, global::System.Nullable<decimal> Fund_Goal, string Original_Budget_Item, decimal Original_Monthly_Budget_Amount, string Original_Fund, global::System.Nullable<decimal> Original_Fund_Goal) {
+        public virtual int Update(int UserID, string Budget_Item, decimal Amount_Budgeted, decimal Amount_Remaining, string Fund, decimal Fund_Goal, int Original_UserID, string Original_Budget_Item, decimal Original_Amount_Budgeted, decimal Original_Amount_Remaining, string Original_Fund, decimal Original_Fund_Goal) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(UserID));
             if ((Budget_Item == null)) {
                 throw new global::System.ArgumentNullException("Budget_Item");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Budget_Item));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Budget_Item));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(Monthly_Budget_Amount));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((decimal)(Amount_Budgeted));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Amount_Remaining));
             if ((Fund == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Fund");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Fund));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Fund));
             }
-            if ((Fund_Goal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Fund_Goal.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Fund_Goal));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_UserID));
             if ((Original_Budget_Item == null)) {
                 throw new global::System.ArgumentNullException("Original_Budget_Item");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Budget_Item));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Budget_Item));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((decimal)(Original_Monthly_Budget_Amount));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_Amount_Budgeted));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Amount_Remaining));
             if ((Original_Fund == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("Original_Fund");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Fund));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_Fund));
             }
-            if ((Original_Fund_Goal.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Fund_Goal.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((decimal)(Original_Fund_Goal));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1092,8 +1096,8 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(decimal Monthly_Budget_Amount, string Fund, global::System.Nullable<decimal> Fund_Goal, string Original_Budget_Item, decimal Original_Monthly_Budget_Amount, string Original_Fund, global::System.Nullable<decimal> Original_Fund_Goal) {
-            return this.Update(Original_Budget_Item, Monthly_Budget_Amount, Fund, Fund_Goal, Original_Budget_Item, Original_Monthly_Budget_Amount, Original_Fund, Original_Fund_Goal);
+        public virtual int Update(int UserID, decimal Amount_Budgeted, decimal Amount_Remaining, string Fund, decimal Fund_Goal, int Original_UserID, string Original_Budget_Item, decimal Original_Amount_Budgeted, decimal Original_Amount_Remaining, string Original_Fund, decimal Original_Fund_Goal) {
+            return this.Update(UserID, Original_Budget_Item, Amount_Budgeted, Amount_Remaining, Fund, Fund_Goal, Original_UserID, Original_Budget_Item, Original_Amount_Budgeted, Original_Amount_Remaining, Original_Fund, Original_Fund_Goal);
         }
     }
     
@@ -1109,7 +1113,7 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         
         private UpdateOrderOption _updateOrder;
         
-        private budgetItemStorageTableTableAdapter _budgetItemStorageTableTableAdapter;
+        private BudgetItemsTableAdapter _budgetItemsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1131,12 +1135,12 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public budgetItemStorageTableTableAdapter budgetItemStorageTableTableAdapter {
+        public BudgetItemsTableAdapter BudgetItemsTableAdapter {
             get {
-                return this._budgetItemStorageTableTableAdapter;
+                return this._budgetItemsTableAdapter;
             }
             set {
-                this._budgetItemStorageTableTableAdapter = value;
+                this._budgetItemsTableAdapter = value;
             }
         }
         
@@ -1159,9 +1163,9 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._budgetItemStorageTableTableAdapter != null) 
-                            && (this._budgetItemStorageTableTableAdapter.Connection != null))) {
-                    return this._budgetItemStorageTableTableAdapter.Connection;
+                if (((this._budgetItemsTableAdapter != null) 
+                            && (this._budgetItemsTableAdapter.Connection != null))) {
+                    return this._budgetItemsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1176,7 +1180,7 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._budgetItemStorageTableTableAdapter != null)) {
+                if ((this._budgetItemsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1188,14 +1192,14 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(budgetItemStorageTable dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(budgetDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._budgetItemStorageTableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet._budgetItemStorageTable.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._budgetItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BudgetItems.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._budgetItemStorageTableTableAdapter.Update(updatedRows));
+                    result = (result + this._budgetItemsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1207,13 +1211,13 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(budgetItemStorageTable dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(budgetDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._budgetItemStorageTableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet._budgetItemStorageTable.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._budgetItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BudgetItems.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._budgetItemStorageTableTableAdapter.Update(addedRows));
+                    result = (result + this._budgetItemsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1225,13 +1229,13 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(budgetItemStorageTable dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(budgetDBDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._budgetItemStorageTableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet._budgetItemStorageTable.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._budgetItemsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BudgetItems.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._budgetItemStorageTableTableAdapter.Update(deletedRows));
+                    result = (result + this._budgetItemsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1267,15 +1271,15 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(budgetItemStorageTable dataSet) {
+        public virtual int UpdateAll(budgetDBDataSet3 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._budgetItemStorageTableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._budgetItemStorageTableTableAdapter.Connection) == false))) {
+            if (((this._budgetItemsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._budgetItemsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1311,13 +1315,13 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._budgetItemStorageTableTableAdapter != null)) {
-                    revertConnections.Add(this._budgetItemStorageTableTableAdapter, this._budgetItemStorageTableTableAdapter.Connection);
-                    this._budgetItemStorageTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._budgetItemStorageTableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._budgetItemStorageTableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._budgetItemStorageTableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._budgetItemStorageTableTableAdapter.Adapter);
+                if ((this._budgetItemsTableAdapter != null)) {
+                    revertConnections.Add(this._budgetItemsTableAdapter, this._budgetItemsTableAdapter.Connection);
+                    this._budgetItemsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._budgetItemsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._budgetItemsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._budgetItemsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._budgetItemsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1378,9 +1382,9 @@ SELECT [Budget Item], [Monthly Budget Amount], Fund, [Fund Goal] FROM budgetItem
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._budgetItemStorageTableTableAdapter != null)) {
-                    this._budgetItemStorageTableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._budgetItemStorageTableTableAdapter]));
-                    this._budgetItemStorageTableTableAdapter.Transaction = null;
+                if ((this._budgetItemsTableAdapter != null)) {
+                    this._budgetItemsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._budgetItemsTableAdapter]));
+                    this._budgetItemsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

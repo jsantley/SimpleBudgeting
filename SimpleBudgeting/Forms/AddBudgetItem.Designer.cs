@@ -39,12 +39,14 @@ namespace SimpleBudgeting
             this.goalTextBox = new System.Windows.Forms.NumericUpDown();
             this.AddBgtItmDoneBttn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.budgetItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnthlyBudgetAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.isFund = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.myfundGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backToOverviewButton = new System.Windows.Forms.Button();
             this.budgetItemStorageTableBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.UserID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.budgetItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mnthlyBudgetAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountRemaining = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isFund = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myfundGoal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.amtBudgeted)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goalTextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -140,16 +142,40 @@ namespace SimpleBudgeting
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserID,
             this.budgetItem,
             this.mnthlyBudgetAmount,
+            this.amountRemaining,
             this.isFund,
             this.myfundGoal});
-            this.dataGridView1.Location = new System.Drawing.Point(393, 65);
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.Location = new System.Drawing.Point(381, 65);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(393, 217);
+            this.dataGridView1.Size = new System.Drawing.Size(494, 230);
             this.dataGridView1.TabIndex = 8;
+            // 
+            // backToOverviewButton
+            // 
+            this.backToOverviewButton.Location = new System.Drawing.Point(218, 272);
+            this.backToOverviewButton.Name = "backToOverviewButton";
+            this.backToOverviewButton.Size = new System.Drawing.Size(105, 23);
+            this.backToOverviewButton.TabIndex = 9;
+            this.backToOverviewButton.Text = "Back to Overview";
+            this.backToOverviewButton.UseVisualStyleBackColor = true;
+            this.backToOverviewButton.Click += new System.EventHandler(this.backToOverviewButton_Click);
+            // 
+            // budgetItemStorageTableBindingSource
+            // 
+            this.budgetItemStorageTableBindingSource.DataMember = "budgetItemStorageTable";
+            // 
+            // UserID
+            // 
+            this.UserID.HeaderText = "UserID";
+            this.UserID.Name = "UserID";
+            this.UserID.Visible = false;
             // 
             // budgetItem
             // 
@@ -160,6 +186,11 @@ namespace SimpleBudgeting
             // 
             this.mnthlyBudgetAmount.HeaderText = "Monthly Budget Amount";
             this.mnthlyBudgetAmount.Name = "mnthlyBudgetAmount";
+            // 
+            // amountRemaining
+            // 
+            this.amountRemaining.HeaderText = "Amount Remaining";
+            this.amountRemaining.Name = "amountRemaining";
             // 
             // isFund
             // 
@@ -172,31 +203,11 @@ namespace SimpleBudgeting
             this.myfundGoal.HeaderText = "Fund Goal";
             this.myfundGoal.Name = "myfundGoal";
             // 
-            // backToOverviewButton
-            // 
-            this.backToOverviewButton.Location = new System.Drawing.Point(218, 272);
-            this.backToOverviewButton.Name = "backToOverviewButton";
-            this.backToOverviewButton.Size = new System.Drawing.Size(105, 23);
-            this.backToOverviewButton.TabIndex = 9;
-            this.backToOverviewButton.Text = "Back to Overview";
-            this.backToOverviewButton.UseVisualStyleBackColor = true;
-            this.backToOverviewButton.Click += new System.EventHandler(this.backToOverviewButton_Click);
-            // 
-            // budgetDBDataSet
-            // 
-            // 
-            // budgetItemStorageTableBindingSource
-            // 
-            this.budgetItemStorageTableBindingSource.DataMember = "budgetItemStorageTable";
-            // 
-            // budgetItemStorageTableTableAdapter
-            // 
-            // 
             // AddBudgetItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 373);
+            this.ClientSize = new System.Drawing.Size(996, 475);
             this.Controls.Add(this.backToOverviewButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.AddBgtItmDoneBttn);
@@ -229,11 +240,13 @@ namespace SimpleBudgeting
         private System.Windows.Forms.NumericUpDown goalTextBox;
         private System.Windows.Forms.Button AddBgtItmDoneBttn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn budgetItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mnthlyBudgetAmount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn isFund;
-        private System.Windows.Forms.DataGridViewTextBoxColumn myfundGoal;
         private System.Windows.Forms.Button backToOverviewButton;
         private System.Windows.Forms.BindingSource budgetItemStorageTableBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn budgetItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mnthlyBudgetAmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountRemaining;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isFund;
+        private System.Windows.Forms.DataGridViewTextBoxColumn myfundGoal;
     }
 }

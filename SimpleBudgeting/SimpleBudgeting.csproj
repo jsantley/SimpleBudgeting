@@ -71,15 +71,15 @@
     <Compile Include="AddItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="budgetDBDataSet.Designer.cs">
+    <Compile Include="budgetDBDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+      <DependentUpon>budgetDBDataSet3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="budgetItemStorageTable.Designer.cs">
+    <Compile Include="budgetItems.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+      <DependentUpon>budgetItems.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\AddBudgetItem.cs">
       <SubType>Form</SubType>
@@ -110,27 +110,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="budgetDBDataSet.xsc">
-      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+    <None Include="budgetDBDataSet3.xsc">
+      <DependentUpon>budgetDBDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="budgetDBDataSet.xsd">
+    <None Include="budgetDBDataSet3.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>budgetDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>budgetDBDataSet3.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="budgetDBDataSet.xss">
-      <DependentUpon>budgetDBDataSet.xsd</DependentUpon>
+    <None Include="budgetDBDataSet3.xss">
+      <DependentUpon>budgetDBDataSet3.xsd</DependentUpon>
     </None>
-    <None Include="budgetItemStorageTable.xsc">
-      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+    <None Include="budgetItems.xsc">
+      <DependentUpon>budgetItems.xsd</DependentUpon>
     </None>
-    <None Include="budgetItemStorageTable.xsd">
+    <None Include="budgetItems.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>budgetItemStorageTable.Designer.cs</LastGenOutput>
+      <LastGenOutput>budgetItems.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="budgetItemStorageTable.xss">
-      <DependentUpon>budgetItemStorageTable.xsd</DependentUpon>
+    <None Include="budgetItems.xss">
+      <DependentUpon>budgetItems.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

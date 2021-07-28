@@ -7,6 +7,7 @@ namespace SimpleBudgeting
     {
         decimal totalPaycheck;
         decimal budgetedAmount;
+        public int userID;
 
         
 
@@ -38,17 +39,17 @@ namespace SimpleBudgeting
 
         public void refreshData_Click(object sender, EventArgs e)
         {
-            
+
+            this.budgetItemsTableAdapter2.Fill(this.budgetDBDataSet3.BudgetItems);
 
 
         }
 
         private void StartupPage_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'budgetItemStorageTable._budgetItemStorageTable' table. You can move, or remove it, as needed.
-            this.budgetItemStorageTableTableAdapter1.Fill(this.budgetItemStorageTable._budgetItemStorageTable);
-            // TODO: This line of code loads data into the 'budgetDBDataSet.budgetItemStorageTable' table. You can move, or remove it, as needed.
-            this.budgetItemStorageTableTableAdapter.Fill(this.budgetDBDataSet.budgetItemStorageTable);
+            // TODO: This line of code loads data into the 'budgetDBDataSet3.BudgetItems' table. You can move, or remove it, as needed.
+            this.budgetItemsTableAdapter2.Fill(this.budgetDBDataSet3.BudgetItems);
+            
 
         }
     }
